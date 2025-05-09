@@ -1,0 +1,167 @@
+<!----------------------------- author : Malak Mohamed Refaat ------------------------------------->
+<!DOCTYPE html >
+<html dir="rtl" lang="ar">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>الملف الشخصي</title>
+        <link rel="icon" type="image/x-icon" href="../../static/images/hieroglyph.png">
+        <link rel="stylesheet" href="../../static/user/css/profile_page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../../static/components/css/navbar.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="index.html" class="site-name">تراثنا</a>
+            <div class="nav-links">
+                <a href="../../templates/User/........................" class="nav-link">الصفحة الرئيسية</a>
+                <a href="../accounts/logout.html" id="logout-btn" class="nav-link">تسجيل الخروج</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar-container">
+                        <img src="../../static/images/woman.png" alt="Profile" class="profile-avatar" id="profileAvatar">
+                        <img src="../../static/images/plus.png" alt="Edit" class="profile-edit" id="editProfileBtn">
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="display-name">Full Name</h1>
+                        <p id="userName">اسم المستخدم</p>
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h2 class="section-title">معلومات شخصيه</h2>
+                        <button class="edit" id="editPersonal">تعديل</button>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">الاسم</div>
+                            <div class="info-value" id="firstname"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">اسم الاب</div>
+                            <div class="info-value" id="lastname"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">البريد الشخصي</div>
+                            <div class="info-value" id="email"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">الرقم المحمول</div>
+                            <div class="info-value" id="phone"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">تاريخ الميلاد</div>
+                            <div class="info-value" id="datebirth"></div>
+                        </div>
+                        <!--i will remove it donot forget-->
+                        
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <div class="section-header">
+                        <h2 class="section-title">الموقع السكني</h2>
+                        <button class="edit" id="editLocationInfo">تعديل</button>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">الدوله</div>
+                            <div class="info-value" id="country">x</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">المدينه</div>
+                            <div class="info-value" id="city">x</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">العنوان</div>
+                            <div class="info-value" id="address">123 famcccily park</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="modal" id="personalModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>تعديل الملف الشخصي</h2>
+                <form id="personalForm">
+                    <div class="form-group">
+                        <label for="editFirstname">الاسم</label>
+                        <input type="text" id="editFirstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editLastname">اسم الاب</label>
+                        <input type="text" id="editLastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">البريد الشخصي</label>
+                        <input type="email" id="editEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone">الرقم المحمول</label>
+                        <input type="tel" id="editPhone">
+                    </div>
+                    <div class="form-group">
+                        <label for="editDatebirth">تاريخ الميلاد</label>
+                        <input type="text" id="editDatebirth">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">حفظ التعديلات</button>
+                        <button type="button" class="cancel-btn">غلق</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--location-->
+        <div class="modal" id="locationModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>تعديل موقع السكن</h2>
+                <form id="locationForm">
+                    <div class="form-group">
+                        <label for="editCountry">الدوله</label>
+                        <input type="text" id="editCountry">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCity">المدينه</label>
+                        <input type="text" id="editCity">
+                    </div>
+                    <div class="form-group">
+                        <label for="editAddress">العنوان</label>
+                        <input type="text" id="editAddress">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">حفظ التعديلات</button>
+                        <button type="button" class="cancel-btn">غلق</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--image-->
+        <div class="imgmodel-overlay" id="imgmodel">
+            <div class="imgmodel-content">
+              <h2 class="imgmodel-title">تغير صوره الملف الشخصي</h2>
+              <img id="imagePreview" class="image-preview" alt="Preview">
+              <input type="file" id="fileInput" accept="image/*" style="display:none">
+              <div>
+                <button class="upload-btn" id="chooseImageBtn">اختار الصور</button>
+                <button class="upload-btn cancel-btn" id="cancelUpload">غلق</button>
+                <button class="upload-btn" id="saveImageBtn" disabled>حفط</button>
+              </div>
+            </div>
+          </div>
+          
+        <script src="../../static/user/js/profile.js"></script>
+        <script type="module" src="../../static/accounts/js/signup.js"></script>
+    </body>
+</html>
