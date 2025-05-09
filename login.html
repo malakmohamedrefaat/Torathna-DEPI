@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <title>تراثنا - تسجيل الدخول</title>
+    <link rel="icon" type="image/x-icon" href="../../static/images/hieroglyph.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="صفحة تسجيل الدخول لموقع تراثنا، محضّر الوصفات" />
+    <link href="../../static/accounts/css/login.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="site-name" style=" font-family: 'Amiri';"> تراثنا </h1>
+    <div class="form-cont">
+        <form method="post" id="formElement">
+            
+            <div class="form-row">
+                <div class="form-item" id="emailContainer">
+                    <label for="email" class="text-label">البريد الإلكتروني</label>
+                    <input name="email" id="email" class="text-field" type="email" placeholder="البريد الإلكتروني"/>
+                </div>
+            </div>
+           
+            <div class="form-row">
+                <div class="form-item" id="passwordContainer">
+                    <label for="password" class="text-label">كلمة المرور</label>
+                    <input name="password" id="password" class="text-field" type="password" placeholder="كلمة المرور" minlength="8"/>
+                </div>
+            </div>
+           
+            <div class="form-row">
+                <div class="form-item form-btn" id="submitContainer">
+                    <button type="submit" class="submit-btn">تسجيل الدخول</button>
+                </div>                    
+            </div>
+            <!--    نسيت كلمة المرور    -->
+            <div class="form-row">
+                <div class="form-item" style="margin-top: 0.75rem;">
+                    <span class="footer-text">نسيت كلمة المرور؟ &nbsp;<a href="./reset-password.html" class="hyperlink">إعادة تعيين</a></span>
+                </div>
+            </div>
+            <!--    تسجيل حساب جديد    -->
+            <div class="form-row">
+                <div class="form-item" style="margin-top: 0.25rem; margin-bottom: 0.3rem;">
+                    <span class="footer-text">ليس لديك حساب؟ &nbsp;<a href="./signup.html" class="hyperlink">تسجيل جديد</a></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--    JavaScript    -->
+    <script type="module" src="../../static/accounts/js/login.js"></script>
+</body>
+</html>
