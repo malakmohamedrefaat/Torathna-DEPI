@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الخروج</title>
+    <link rel="icon" type="image/x-icon" href="../../static/images/hieroglyph.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f9f5f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .logout-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .logout-content h2 {
+            color: #a0522d;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .logout-content p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .logout-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .logout-btn.confirm {
+            background-color: #a0522d;
+            color: #f9f5f0;
+        }
+
+        .logout-btn.confirm:hover {
+            transform: scale(1.05);
+            background-color: #8b4513;
+            box-shadow: 0 0 10px rgba(160, 82, 45, 0.4);
+        }
+
+        .logout-btn.cancel {
+            background-color: #e6d5c8;
+            color: #a0522d;
+            border: 1px solid #d0b8a6;
+        }
+
+        .logout-btn.cancel:hover {
+            background-color: #d0b8a6;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(208, 184, 166, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .logout-container {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+            
+            .logout-actions {
+                flex-direction: column;
+            }
+            
+            .logout-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <div class="logout-content">
+            <h2>تأكيد تسجيل الخروج</h2>
+            <p>هل أنت متأكد أنك تريد تسجيل الخروج؟</p>
+            <div class="logout-actions">
+                <button id="confirmLogout" class="logout-btn confirm">تسجيل الخروج</button>
+                <button id="cancelLogout" class="logout-btn cancel">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const confirmLogout = document.getElementById('confirmLogout');
+            const cancelLogout = document.getElementById('cancelLogout');
+
+            confirmLogout.addEventListener('click', function() {
+                // Clear all authentication data
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('userData');
+                sessionStorage.clear();
+                
+                // Redirect to login page
+                window.location.href = '../../templates/accounts/login.html';
+            });
+
+            cancelLogout.addEventListener('click', function() {
+                // Go back to previous page
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+</html>
