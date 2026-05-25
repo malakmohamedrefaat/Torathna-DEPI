@@ -67,3 +67,15 @@ The solution is structured using a traditional **N-Tier Architecture** to ensure
 * [Visual Studio 2022](https://visualstudio.microsoft.com/) or VS Code
 * SQL Server Express or LocalDB
 
+---
+
+## Team members
+
+* Malak Mohamed Refaat
+* Habiba Ali Zein
+* Seif Waleed
+* Yasmin Mohamed
+* Islam Hany
+* Fatma Nasser
+  
+
