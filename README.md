@@ -29,7 +29,7 @@
 **Torathna (تراثنا)** is an e-commerce and cultural preservation platform dedicated to celebrating Egyptian heritage. The platform connects authentic local artisans with a global audience, allowing traditional, handmade crafts (such as pottery, khayameya, handmade rugs, and copperware) to be shared, appreciated, and purchased worldwide. 
 
 This project serves as our final graduation project, engineered using a scalable multi-layered .NET architecture.
-
+You can reach to our final [presentation here](https://drive.google.com/file/d/1kq_EKOdYWxb91KDqOZbORidVxUJ_jEsF/view?usp=sharing)
 ---
 
 ## Architecture & Project Structure
